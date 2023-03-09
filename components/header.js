@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+import { forwardRef } from 'react'
 import {
   Container,
   Box,
@@ -28,6 +29,10 @@ const LinkItem = ({ href, target, children }) => {
         </Link>
     )
 }
+
+const MenuLink = forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+))
 
 const Header = () => {
     return (
@@ -75,16 +80,16 @@ const Header = () => {
                             aria-label="Options"
                         />
                         <MenuList>
-                            <MenuItem href="/">
+                            <MenuItem as={MenuLink} href="/">
                                 Home
                             </MenuItem>
-                            <MenuItem href="/about">
+                            <MenuItem as={MenuLink} href="/about">
                                 About
                             </MenuItem>
-                            <MenuItem href="/blog">
+                            <MenuItem as={MenuLink} href="/blog">
                                 Blog
                             </MenuItem>
-                            <MenuItem href="/uses">
+                            <MenuItem as={MenuLink} href="/uses">
                                 Uses
                             </MenuItem>
                         </MenuList>
