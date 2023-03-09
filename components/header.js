@@ -57,6 +57,7 @@ const Header = () => {
                     </Link>
                 </Flex>
                 <Box
+                    display={ {base: 'none', md: 'flex' }}
                 >
                     <LinkItem href="/about">
                         About
@@ -72,31 +73,33 @@ const Header = () => {
                 <Box
                     flex={1}
                     align="right"
-                    ml={2}
                 >
                     <ChangeThemeButton />
-                    <Menu isLazy>
-                        <MenuButton
-                            as={IconButton}
-                            icon={<HamburgerIcon />}
-                            variant="outline"
-                            aria-label="Options"
-                        />
-                        <MenuList>
-                            <MenuItem as={MenuLink} href="/">
-                                Home
-                            </MenuItem>
-                            <MenuItem as={MenuLink} href="/about">
-                                About
-                            </MenuItem>
-                            <MenuItem as={MenuLink} href="/blog">
-                                Blog
-                            </MenuItem>
-                            <MenuItem as={MenuLink} href="/uses">
-                                Uses
-                            </MenuItem>
-                        </MenuList>
-                    </Menu>
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                        <Menu isLazy>
+                            <MenuButton
+                                as={IconButton}
+                                icon={<HamburgerIcon />}
+                                variant="outline"
+                                aria-label="Options"
+                            />
+                            <MenuList>
+                                <MenuItem as={MenuLink} href="/">
+                                    Home
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/about">
+                                    About
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/blog">
+                                    Blog
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/uses">
+                                    Uses
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Box>
+
                 </Box>
             </Container>
         </Box>
