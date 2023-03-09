@@ -67,13 +67,27 @@ const Header = () => {
                     align="right"
                     ml={2}
                 >
-                    <Menu isLazy id="navbar-menu">
+                    <Menu isLazy>
                         <MenuButton
                             as={IconButton}
                             icon={<HamburgerIcon />}
                             variant="outline"
                             aria-label="Options"
                         />
+                        <MenuList>
+                            <MenuItem href="/">
+                                Home
+                            </MenuItem>
+                            <MenuItem href="/about">
+                                About
+                            </MenuItem>
+                            <MenuItem href="/blog">
+                                Blog
+                            </MenuItem>
+                            <MenuItem href="/uses">
+                                Uses
+                            </MenuItem>
+                        </MenuList>
                     </Menu>
                 </Box>
             </Container>
