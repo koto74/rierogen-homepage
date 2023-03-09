@@ -13,6 +13,7 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 const LinkItem = ({ href, target, children }) => {
     return (
@@ -59,6 +60,21 @@ const Header = () => {
                     <LinkItem href="/uses">
                         Uses
                     </LinkItem>
+                </Box>
+
+                <Box
+                    flex={1}
+                    align="right"
+                    ml={2}
+                >
+                    <Menu isLazy id="navbar-menu">
+                        <MenuButton
+                            as={IconButton}
+                            icon={<HamburgerIcon />}
+                            variant="outline"
+                            aria-label="Options"
+                        />
+                    </Menu>
                 </Box>
             </Container>
         </Box>
