@@ -16,6 +16,8 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
+import ChangeThemeButton  from './change-theme-button'
+
 const LinkItem = ({ href, target, children }) => {
     return (
         <Link
@@ -72,6 +74,7 @@ const Header = () => {
                     align="right"
                     ml={2}
                 >
+                    <ChangeThemeButton />
                     <Menu isLazy>
                         <MenuButton
                             as={IconButton}
