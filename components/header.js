@@ -39,7 +39,7 @@ const MenuLink = forwardRef((props, ref) => (
 const Header = () => {
     return (
         <Box
-            position="fixed"
+            position="sticky"
             as="nav"
             w="100%"
             css={{ backdropFilter: 'blur(10px)' }}
