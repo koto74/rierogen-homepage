@@ -10,7 +10,7 @@ import {
     ListItem,
     useColorModeValue,
     chakra
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react'
 import Header from '../components/header'
 
 const Blog = () => {
@@ -19,7 +19,7 @@ const Blog = () => {
             <Header />
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
-                    Blog
+                    Blog test
                 </Heading>
 
             </Container>
