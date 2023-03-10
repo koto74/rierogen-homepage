@@ -16,7 +16,6 @@ import Header from '../components/header'
 const Uses = () => {
     return (
         <Box>
-            <Header />
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
                     Uses

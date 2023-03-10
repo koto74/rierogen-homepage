@@ -16,10 +16,9 @@ import Header from '../components/header'
 const Blog = () => {
     return (
         <Box>
-            <Header />
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
-                    Blog test
+                    Blog
                 </Heading>
 
             </Container>

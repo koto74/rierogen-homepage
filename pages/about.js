@@ -25,7 +25,6 @@ const ProfileImage = chakra(Image, {
 const About = () => {
     return (
         <Box>
-            <Header />
             <Container>
                 <Heading as="h3" fontSize={20} mb={4}>
                     About
@@ -146,7 +145,6 @@ const About = () => {
                 </Box>
 
             </Container>
-            <Footer />
         </Box>
     )
 }

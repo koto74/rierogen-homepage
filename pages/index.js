@@ -5,7 +5,6 @@ import Header from '../components/header'
 const Home = () => {
     return (
         <Box>
-            <Header />
         </Box>
     )
 }

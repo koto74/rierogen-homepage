@@ -23,7 +23,6 @@ const LinkItem = ({ href, target, children }) => {
         <Link
             as={NextLink}
             href={href}
-            scroll={false}
             target={target}
             p={3}
         >
