@@ -9,11 +9,33 @@ import {
     List,
     ListItem,
     useColorModeValue,
-    chakra
+    chakra,
+    Card
 } from '@chakra-ui/react'
-import Header from '../components/header'
+import fs from 'fs'
+import matter from 'gray-matter'
+import PostCard from '../components/postcard'
 
-const Blog = () => {
+export const getStaticProps = () => {
+    const files = fs.readdirSync('posts')
+    const posts = files.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, '')
+        const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
+        const { data, content } = matter(fileContent)
+        return {
+            frontMatter: data,
+            slug
+        }
+    });
+    return {
+        props: {
+            posts,
+        }
+    }
+}
+
+const Blog = ({ posts }) => {
+    console.log(posts)
     return (
         <Box>
             <Container>
@@ -21,7 +43,14 @@ const Blog = () => {
                     Blog
                 </Heading>
 
-            </Container>
+                <SimpleGrid columns={[1, 2, 2]} spacing={10}>
+                    <Box w="100%">
+                        {posts.map((post) => (
+                            <PostCard key={post.slug} post={post} />
+                        ))}
+                    </Box>
+                </SimpleGrid>
+           </Container>
         </Box>
     )
 }

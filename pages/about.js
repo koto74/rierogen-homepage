@@ -14,8 +14,6 @@ import {
     ListIcon
 } from '@chakra-ui/react'
 import { IoLogoTwitter, IoLogoGithub, IoLinkOutline } from 'react-icons/io5'
-import Header from '../components/header'
-import Footer from '../components/footer'
 import { MinusIcon } from '@chakra-ui/icons'
 
 const ProfileImage = chakra(Image, {
