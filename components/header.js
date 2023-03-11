@@ -61,8 +61,8 @@ const Header = () => {
                     <LinkItem href="/about">
                         About
                     </LinkItem>
-                    <LinkItem href="/blog">
-                        Blog
+                    <LinkItem href="/works">
+                        Works
                     </LinkItem>
                     <LinkItem href="/uses">
                         Uses
@@ -89,8 +89,8 @@ const Header = () => {
                                 <MenuItem as={MenuLink} href="/about">
                                     About
                                 </MenuItem>
-                                <MenuItem as={MenuLink} href="/blog">
-                                    Blog
+                                <MenuItem as={MenuLink} href="/works">
+                                    Works
                                 </MenuItem>
                                 <MenuItem as={MenuLink} href="/uses">
                                     Uses
