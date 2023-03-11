@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+import NextImage from 'next/image'
 import {
     Link,
     Container,
@@ -10,29 +11,11 @@ import {
     ListItem,
     useColorModeValue,
     chakra,
-    Card
+    Card,
+    CardBody,
+    Text
 } from '@chakra-ui/react'
-import fs from 'fs'
-import matter from 'gray-matter'
-import PostCard from '../components/postcard'
-
-export const getStaticProps = () => {
-    const files = fs.readdirSync('posts')
-    const posts = files.map((fileName) => {
-        const slug = fileName.replace(/\.md$/, '')
-        const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
-        const { data, content } = matter(fileContent)
-        return {
-            frontMatter: data,
-            slug
-        }
-    });
-    return {
-        props: {
-            posts,
-        }
-    }
-}
+import WorkCard from '../components/workcard'
 
 const Works = ({ posts }) => {
     console.log(posts)
@@ -44,11 +27,16 @@ const Works = ({ posts }) => {
                 </Heading>
 
                 <SimpleGrid columns={[1, 2, 2]} spacing={10}>
-                    <Box w="100%">
-                        {posts.map((post) => (
-                            <PostCard key={post.slug} post={post} />
-                        ))}
-                    </Box>
+                    <WorkCard
+                        id='rieogen-homepage'
+                        title='Inkdrop'
+                        image_src='inkdrop_eyecatch.png'
+                    />
+                    <WorkCard
+                        id='rieogen-homepage'
+                        title='menkiki'
+                        image_src='menkiki_eyecatch.png'
+                    />
                 </SimpleGrid>
            </Container>
         </Box>
