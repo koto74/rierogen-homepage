@@ -31,12 +31,16 @@ const Works = ({ posts }) => {
                         id='rieogen-homepage'
                         title='Inkdrop'
                         image_src='inkdrop_eyecatch.png'
-                    />
+                    >
+                        this is not mine.
+                    </WorkCard>
                     <WorkCard
                         id='rieogen-homepage'
                         title='menkiki'
                         image_src='menkiki_eyecatch.png'
-                    />
+                    >
+                        this is not mine.
+                    </WorkCard>
                 </SimpleGrid>
            </Container>
         </Box>

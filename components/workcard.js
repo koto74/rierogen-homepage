@@ -2,7 +2,7 @@ import { Box, Card, Heading, Text } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import NextLink from 'next/link'
 
-const WorkCard = ({ id, title, image_src }) => {
+const WorkCard = ({ id, title, image_src, children }) => {
     return (
         <NextLink href={`/works/${id}`}>
             <Card>
@@ -13,9 +13,10 @@ const WorkCard = ({ id, title, image_src }) => {
                         height={700}
                         alt={title}
                     />
-                    <Heading mt={3} size='md' align='center'>{title}</Heading>
+                    <Heading mt={2} size='md' align='center'>{title}</Heading>
+                    <Text fontSize={14} align='center' p={1} marginBlockEnd={1}>{children}</Text>
                 </Box>
-           </Card>
+            </Card>     
         </NextLink>
     )
 }
