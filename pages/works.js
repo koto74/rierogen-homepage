@@ -41,6 +41,27 @@ const Works = ({ posts }) => {
                     >
                         this is not mine.
                     </WorkCard>
+                     <WorkCard
+                        id='rieogen-homepage'
+                        title='menkiki'
+                        image_src='menkiki_eyecatch.png'
+                    >
+                        this is not mine.
+                    </WorkCard>
+                    <WorkCard
+                        id='rieogen-homepage'
+                        title='modetokyo'
+                        image_src='modetokyo_eyecatch.png'
+                    >
+                        this is not mine.
+                    </WorkCard>
+                    <WorkCard
+                        id='rieogen-homepage'
+                        title='pichu2'
+                        image_src='pichu2_eyecatch.png'
+                    >
+                        this is not mine.
+                    </WorkCard>
                 </SimpleGrid>
            </Container>
         </Box>

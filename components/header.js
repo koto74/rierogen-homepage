@@ -39,7 +39,7 @@ const Header = () => {
     return (
         <Box
             zIndex={2}
-            position="relative"
+            position="fixed"
             as="nav"
             w="100%"
             css={{ backdropFilter: 'blur(10px)' }}
@@ -53,7 +53,9 @@ const Header = () => {
             >
                 <Flex align="center" mr={10}>
                     <Link href="/">
-                        Rieogen
+                        <Heading size='lg'>
+                            RIeogen
+                        </Heading>
                     </Link>
                 </Flex>
                 <Box
