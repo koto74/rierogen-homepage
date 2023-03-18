@@ -1,7 +1,6 @@
 import NextLink from 'next/link'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrbitControls, ContactShadows } from '@react-three/drei'
-import { useControls } from 'leva'
 import { Heading, Box, Button } from '@chakra-ui/react'
 
 const MODELS = {
