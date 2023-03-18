@@ -4,4 +4,5 @@ const Fonts = () => (
     `}</style>
 )
 
+
 export default Fonts
