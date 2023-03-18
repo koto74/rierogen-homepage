@@ -53,8 +53,11 @@ const Header = () => {
             >
                 <Flex align="center" mr={10}>
                     <Link href="/">
-                        <Heading size='lg'>
-                            RIeogen
+                        <Heading
+                            size='lg'
+
+                        >
+                            Rieogen
                         </Heading>
                     </Link>
                 </Flex>
